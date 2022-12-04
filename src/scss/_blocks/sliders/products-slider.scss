@@ -1,0 +1,86 @@
+.products-slider {
+  &__slide {
+    max-width: 282px;
+  }
+
+  &__link {
+    margin-bottom: 16px;
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+
+  &__title {
+    font-size: 18px;
+  }
+
+  &__price {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: calc(22 / 18);
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  &__stats {
+    padding: 13px 19px;
+    border: 1px solid $color-ligth_gray;
+    border-radius: 30px 0 0 30px;
+    transition: border-color 0.4s ease-in;
+
+    &:hover {
+      border-color: $color-primary;
+    }
+  }
+
+  &__icons {
+    fill: none;
+
+    &--graph {
+      stroke: $color-primary;
+      width: 17px;
+      height: 18px;
+    }
+
+    &--right {
+      stroke: $color-dark_gray;
+      transition: stroke 0.4s ease-in;
+    }
+  }
+
+  &__details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 24px;
+    border: 1px solid $color-primary;
+    border-radius: 0 30px 30px 0;
+    width: 100%;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: calc(20 / 16);
+    transition: border-color 0.4s ease-in, color 0.4s ease-in;
+
+    &:hover {
+      color: $color-orange;
+      border-color: $color-orange;
+
+      .products-slider__icons--right {
+        stroke: $color-orange;
+      }
+    }
+  }
+}

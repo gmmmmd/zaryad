@@ -1,0 +1,187 @@
+.footer {
+  background-color: $color-secondary;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 49px;
+    padding: 40px 0;
+
+    @media (min-width: $media-tablet) {
+      padding: 100px 0;
+    }
+  }
+
+  &__button {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: -70px;
+    z-index: 2;
+
+    @media (min-width: $media-tablet) {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @media (min-width: 1260px) {
+      right: -33px;
+      top: 0;
+    }
+  }
+
+  &__top {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+
+    @media (min-width: $media-tablet) {
+      flex-direction: row;
+      gap: 50px;
+    }
+  }
+
+  &__bottom {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    @media (min-width: $media-tablet) {
+      flex-direction: row;
+      gap: 169px;
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    order: 1;
+
+    @media (min-width: $media-tablet) {
+      justify-content: space-between;
+      gap: 68px;
+      width: 38%;
+      order: 0;
+    }
+  }
+
+  &__list {
+    @include no-list;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    @media (min-width: $media-tablet) {
+      gap: 16px;
+    }
+  }
+
+  &__item {
+    color: $color-primary;
+    transition: color 0.4s ease-in;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover,
+    &:focus-visible {
+      color: $color-ligth_gray;
+    }
+  }
+
+  &__contacts-link {
+    color: $color-primary;
+    transition: color 0.4s ease-in;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover,
+    &:focus-visible {
+      color: $color-ligth_gray;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    order: 0;
+
+    @media (min-width: $media-tablet) {
+      width: 62%;
+      gap: 50px;
+      order: 0;
+    }
+  }
+
+  &__nav-wrapper {
+    display: flex;
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 50%;
+
+    @media (min-width: $media-tablet) {
+      gap: 24px;
+    }
+  }
+
+  &__copyright {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    color: $color-dark_gray;
+
+    @media (min-width: $media-tablet) {
+      gap: 8px;
+    }
+  }
+
+  &__privacy-policy {
+    text-decoration: underline;
+    color: $color-dark_gray;
+    transition: color 0.4s ease-in;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover,
+    &:focus-visible {
+      color: $color-ligth_gray;
+    }
+  }
+
+  &__imperium {
+    margin-top: 10px;
+
+    @media (min-width: $media-tablet) {
+      margin: 0;
+      position: absolute;
+      right: -10px;
+      bottom: 0;
+      transition: opacity 0.4s ease-in;
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+
+    @media (min-width: 1260px) {
+      right: -33px;
+    }
+  }
+}

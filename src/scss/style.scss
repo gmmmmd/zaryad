@@ -1,0 +1,36 @@
+@import "_fonts";
+@import "_variables.base";
+@import "_mixins";
+
+/*
+  Import vendor libraries
+*/
+@import "vendor/_normalize";
+@import "vendor/_swiper-bundle";
+
+/*
+  Import utils classes and base styles
+*/
+@import "_utils";
+@import "_base";
+@import "_text-styles";
+
+/*
+  Import all other blocks
+*/
+@import "_blocks/container";
+@import "_blocks/button";
+@import "_blocks/marquee";
+@import "_blocks/form/contact-form";
+@import "_blocks/sliders/swiper";
+@import "_blocks/sliders/hero-slider";
+@import "_blocks/sliders/products-slider";
+@import "_blocks/icons";
+@import "_blocks/social";
+@import "_blocks/contacts";
+@import "_blocks/header";
+@import "_blocks/hero";
+@import "_blocks/products";
+@import "_blocks/subscribe";
+@import "_blocks/footer";
+@import "_blocks/coming-soon";

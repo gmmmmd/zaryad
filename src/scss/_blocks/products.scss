@@ -1,0 +1,27 @@
+.products {
+  background-color: $color-secondary;
+
+  &__container {
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    overflow: hidden;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__controls {
+    display: flex;
+  }
+
+  &__marque {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}

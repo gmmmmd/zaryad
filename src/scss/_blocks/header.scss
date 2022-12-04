@@ -1,0 +1,96 @@
+.header {
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 13px 0;
+  }
+
+  &__main {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+  }
+
+  &__buttons-lang {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: calc(22 / 16);
+    color: $color-dark_gray;
+    display: none;
+
+    @media (min-width: $media-tablet-landscape) {
+      display: block;
+    }
+  }
+
+  &__list {
+    @include no-list;
+
+    display: none;
+
+    @media (min-width: $media-tablet-landscape) {
+      display: flex;
+      gap: 24px;
+    }
+  }
+
+  &__item {
+    color: $color-dark_gray;
+    transition: color 0.4s ease-in;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover,
+    &:focus-visible {
+      color: $color-ligth_gray;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  &__controls {
+    display: none;
+
+    @media (min-width: $media-tablet-landscape) {
+      display: flex;
+      gap: 16px;
+    }
+  }
+
+  &__control {
+    display: flex;
+    align-items: center;
+    fill: none;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: 1px solid $color-secondary;
+      border-radius: 3px;
+    }
+  }
+
+  &__cart {
+    align-items: center;
+    display: flex;
+    transition: scale 0.4s ease-in;
+
+    &:hover {
+      scale: 1.1;
+    }
+  }
+}

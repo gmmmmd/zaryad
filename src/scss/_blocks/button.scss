@@ -1,0 +1,56 @@
+.button {
+  @include no-btn;
+
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  &__lang {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: calc(22 / 16);
+    color: $color-dark_gray;
+
+    &--active {
+      color: $color-logo;
+    }
+  }
+
+  &__primary,
+  &__secondary {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: calc(20 / 16);
+  }
+
+  &__primary {
+    padding: 0 20px;
+    border: 1px solid $color-black;
+    background-color: $color-white;
+    color: $color-primary;
+    transition: box-shadow 0.4s ease-in;
+
+    &:hover,
+    &:focus-visible {
+      box-shadow: 0 4px 20px rgb(238 238 238 / 40%);
+    }
+  }
+
+  &__secondary {
+    padding: 0 35px;
+    border: 1px solid $color-orange;
+    color: $color-orange;
+    transition: color 0.4s ease-in, background-color 0.4s ease-in;
+
+    &:hover,
+    &:focus-visible {
+      background-color: $color-orange;
+      color: $color-white;
+    }
+  }
+}

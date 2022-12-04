@@ -1,0 +1,64 @@
+.title-h2 {
+  font-size: 24px;
+  line-height: calc(26 / 24);
+  font-weight: 700;
+  margin: 0;
+
+  @media (min-width: $media-tablet) {
+    font-size: 48px;
+  }
+}
+
+.title-h3 {
+  font-size: 18px;
+  line-height: calc(22 / 18);
+  font-weight: 600;
+  margin: 0;
+
+  @media (min-width: $media-tablet) {
+    font-size: 24px;
+  }
+}
+
+.title-h4 {
+  font-size: 16px;
+  line-height: calc(22 / 18);
+  font-weight: 700;
+  margin: 0;
+
+  @media (min-width: $media-tablet) {
+    font-size: 18px;
+  }
+}
+
+.text-style {
+  font-size: 14px;
+  line-height: calc(22 / 16);
+  font-weight: 400;
+  margin: 0;
+
+  @media (min-width: $media-tablet) {
+    font-size: 16px;
+  }
+
+  &--wrapper {
+    color: $color-ligth_gray;
+  }
+}
+
+.message-input {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 30px;
+
+  .error-input & {
+    color: $color-orange;
+    font-size: 14px;
+  }
+
+  .access-input {
+    color: $color-blue;
+    font-size: 14px;
+  }
+}

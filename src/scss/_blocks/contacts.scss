@@ -1,0 +1,24 @@
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  @media (min-width: $media-tablet) {
+    gap: 16px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    &--couple {
+      width: 50%;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    width: 100%;
+  }
+}

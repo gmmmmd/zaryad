@@ -1,0 +1,27 @@
+.social {
+  display: flex;
+  gap: 16px;
+
+  &__link {
+    display: flex;
+    fill: none;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: 1px solid $color-ligth_gray;
+      border-radius: 3px;
+    }
+  }
+
+  &__icon {
+    stroke: $color-dark_gray;
+    transition: stroke 0.4s ease-in;
+
+    &:hover {
+      stroke: $color-orange;
+    }
+  }
+}

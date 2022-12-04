@@ -1,0 +1,36 @@
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 445px;
+
+  &__field {
+    position: relative;
+    width: 100%;
+  }
+
+  &__input {
+    color: $color-secondary;
+    width: 100%;
+    margin-bottom: 56px;
+    padding: 0 0 10px;
+    border: none;
+    border-bottom: 1px solid $color-dark_gray;
+    background-color: inherit;
+    outline: none;
+    resize: none;
+
+    &::placeholder {
+      font-size: 16px;
+      line-height: 22px;
+      color: $color-dark_gray;
+    }
+
+    .error-input & {
+      border-color: $color-orange;
+    }
+
+    .access-input & {
+      border-color: $color-blue;
+    }
+  }
+}

@@ -1,0 +1,111 @@
+.subscribe {
+  position: relative;
+  overflow: hidden;
+
+  &__container {
+    display: flex;
+    padding: 40px 0;
+
+    @media (min-width: $media-tablet) {
+      padding: 70px 0 130px;
+    }
+  }
+
+  &__content {
+    position: relative;
+    max-width: 665px;
+    z-index: 1;
+  }
+
+  &__title {
+    color: $color-black;
+    font-size: 50px;
+    text-shadow: 0 1px $color-ligth_gray, 0 -1px $color-ligth_gray, 1px 0 $color-ligth_gray, -1px 0 $color-ligth_gray;
+    margin-bottom: 40px;
+
+    @media (min-width: $media-tablet) {
+      font-size: 90px;
+    }
+  }
+
+  &__flash,
+  &__sale {
+    position: relative;
+
+    &::before {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__flash {
+    &::before {
+      width: 105px;
+      height: 105px;
+      background: radial-gradient(50% 50% at 50% 50%, $color-blue 0, rgba(1, 120, 243, 0) 100%);
+      filter: blur(32px);
+    }
+  }
+
+  &__sale {
+    &::before {
+      width: 90px;
+      height: 90px;
+      background: radial-gradient(50% 50% at 50% 50%, $color-orange 0, rgba(246, 79, 0, 0) 100%);
+      filter: blur(32px);
+    }
+  }
+
+  &__discont {
+    color: $color-secondary;
+    line-height: calc(104 / 90);
+    text-shadow: none;
+  }
+
+  &__description {
+    font-size: 18px;
+    line-height: calc(24 / 18);
+    color: $color-ligth_gray;
+    max-width: 490px;
+    margin-bottom: 40px;
+  }
+
+  &__picture {
+    display: none;
+    z-index: 0;
+
+    @media (min-width: $media-tablet-landscape) {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: -34%;
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 736px;
+        height: 736px;
+        border: 1px solid $color-primary;
+        border-radius: 50%;
+      }
+    }
+
+    @media (min-width: $media-desktop) {
+      right: -6%;
+    }
+  }
+
+  &__img {
+    object-fit: contain;
+    border-radius: 50%;
+    width: 736px;
+    padding: 40px;
+  }
+}
